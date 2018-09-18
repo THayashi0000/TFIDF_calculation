@@ -52,7 +52,7 @@ def idf(terms, documents):
     """
     import math
     print("start idf")
-    return [math.log10(float(len(documents))/sum([bool(term in document) for document in documents])) for term in terms]
+    return [math.log10(float(len(documents)+1)/sum([bool(term in document) for document in documents])) for term in terms]
 
 
 def tf_idf(terms, documents):
